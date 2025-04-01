@@ -5,7 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="javaScript.js" defer></script>
+    <script type="module" src="operations.js"></script>
+    <script type="module" src="javaScript.js"></script>
   </head>
-  <body></body>
+  <body>
+    <div class="calculator" id="calculator">
+      <div class="screen" id="screen">
+        <img src="delete.png" id="delete" />
+        <h1 id="screenText">0</h1>
+      </div>
+      <div class="keyBoard" id="keyboard">
+        <div class="row">
+          <div id="1">1</div>
+          <div id="2">2</div>
+          <div id="3">3</div>
+          <div id="+">+</div>
+        </div>
+        <div class="row">
+          <div id="4">4</div>
+          <div id="5">5</div>
+          <div id="6">6</div>
+          <div id="-">-</div>
+        </div>
+        <div class="row">
+          <div id="7">7</div>
+          <div id="8">8</div>
+          <div id="9">9</div>
+          <div id="X">&times</div>
+        </div>
+        <div class="row">
+          <div id=".">.</div>
+          <div id="0">0</div>
+          <div id="=">=</div>
+          <div id="/">&divide</div>
+        </div>
+        <div class="row">
+          <div id="clear">CLEAR</div>
+        </div>
+      </div>
+    </div>
+    <div class="bigScreen" id="bigScreen"></div>
+  </body>
 </html>

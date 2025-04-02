@@ -22,18 +22,75 @@ div {
 }
 
 .calculator {
-  width: 35%;
+  flex: 35%;
   height: 90%;
   display: flex;
   flex-direction: column;
 }
 
 .bigScreen {
+  flex: 65%;
   height: 90%;
+  margin: 3% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 10px 50px;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 40%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.4),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.screen,
-.bigScreen {
+.historyTitle {
+  align-self: center;
+}
+
+.history {
+  flex: 9;
+
+  width: 100%;
+  border-bottom: gray 1px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.total {
+  margin-left: 50px;
+  flex: 1;
+}
+
+.history-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px; /* Espacio entre el cálculo y el resultado */
+}
+
+.history-left {
+  flex: 1;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.history-right {
+  flex: 0.3;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.screen {
   flex: 2;
   margin: 3% 4%;
   display: flex;
@@ -131,4 +188,17 @@ div {
     width: 90%; /* Se expande casi al ancho completo */
     height: 75%; /* Reduce aún más la altura */
   }
+}
+
+/* Estilos para navegadores basados en WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 4px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: gray; /* Color gris de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Fondo del scrollbar transparente */
 }

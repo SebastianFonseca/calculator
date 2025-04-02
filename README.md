@@ -1,3 +1,3 @@
 # Calculator
 
-Still many logic usses to fix
+Still many logic issues to fix

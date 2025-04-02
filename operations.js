@@ -1,23 +1,33 @@
-// operations.js
-export let add = (a, b) => a + b;
+export let add = (a, b) => +a + +b;
 export let subtract = (a, b) => a - b;
 export let multiply = (a, b) => a * b;
 export let divide = (a, b) => {
-  if (b === 0) return "Not dividing by 0.";
+  if (b === 0) return "Infinity!";
   return a / b;
 };
 
 export function operate(firstO, secondO, operat) {
+  firstO = parseFloat(firstO);
+  secondO = parseFloat(secondO);
+
+  let result;
+
   switch (operat) {
     case "+":
-      return add(firstO, secondO);
+      result = add(firstO, secondO);
+      break;
     case "-":
-      return subtract(firstO, secondO);
-    case "*":
-      return multiply(firstO, secondO);
-    case "/":
-      return divide(firstO, secondO);
+      result = subtract(firstO, secondO);
+      break;
+    case "×":
+      result = multiply(firstO, secondO);
+      break;
+    case "÷":
+      result = divide(firstO, secondO);
+      break;
     default:
       return "Invalid operation";
   }
+
+  return parseFloat(result.toPrecision(6)); // Mantiene 6 cifras significativas
 }
